@@ -6,7 +6,7 @@
       <app-employee-form [label]="item.label" [fields]="item.fields" (setForm)="getFormInfo($event)" (checkValid)="checkValidity($event)"></app-employee-form>
     </div>
     <div class="title">
-      <button type="submit" class="btn btn-primary" [disabled]="checkValid">Submit</button>
+      <button type="submit" class="btn btn-primary" (click)="submitForm()">Submit</button>
       <button type="submit" class="btn btn-primary" (click)="reset()">Reset</button>
     </div>
   </div>

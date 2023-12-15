@@ -25,15 +25,17 @@ export class AppComponent {
 
   getFormInfo(e: any){
     this.dynamicFormValue.push(e);
-    console.log("form",this.dynamicFormValue);
   }
 
   checkValidity(e: any) {
-    console.log(e.invalid);
     this.checkValid = e.invalid;
   }
 
   reset() {
     this.employeeForm.resetForm()
+  }
+
+  submitForm(){
+    console.log("form",this.dynamicFormValue);
   }
 }
