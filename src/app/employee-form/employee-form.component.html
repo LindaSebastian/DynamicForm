@@ -1,0 +1,68 @@
+<section>
+    <div class="label">{{label}}</div>
+    <div class="sub-form">
+        <form [formGroup]="dynamicForm" class="col-md-12 row g-3">
+          <ng-container *ngFor="let control of fields">
+            <div class="col-md-5 ml-4 mt-2" *ngIf="['date', 'email', 'text' , 'number' , 'password'].includes(control.type)">
+              <label class="form-label pt-15">{{control.label}}</label><span *ngIf="setRequiredField(control)" class="text-danger">*</span>
+              <input [type]="control.type" class="form-control mb-15" formControlName="{{control.name}}">
+              <div 
+              class="text-danger" 
+          >{{getValidationErr(control)}}</div>
+            </div>
+
+            <div class="col-md-5 ml-4 mt-2" *ngIf="control.type == 'select'">
+              <label class="form-label pt-15">{{control.label}}</label>
+              <span *ngIf="setRequiredField(control)" class="text-danger">*</span>
+
+              <select class="mb-15 form-select" id="floatingSelect" aria-label="Floating label select example" formControlName="{{control.name}}">
+                <option selected value="">Choose {{control.label}} ..</option>
+                <ng-container *ngFor="let option of control.options">
+                  <option value="{{option.value}}">{{option.label}}</option>
+                </ng-container>
+              </select>
+              <div 
+              class="text-danger">{{getValidationErr(control)}}</div>
+            </div>
+
+            <div class="col-md-5" *ngIf="control.type == 'radio'">
+              <label class="form-check-label ml-4">
+                {{control.label}}
+              </label><span *ngIf="setRequiredField(control)" class="text-danger">*</span>
+              <ng-container *ngFor="let option of control.options">
+                <div class="form-check ml-4 pt-15 mb-15">
+                  <input formControlName="{{control.name}}" class="form-check-input" type="radio" value="{{option.value}}">
+                  <label class="form-check-label" [for]="control.name">
+                    {{option.label}}
+                  </label>
+                </div>
+              </ng-container>
+              <div 
+              class="text-danger" 
+          >{{getValidationErr(control)}}</div>
+            </div>
+
+            <div class="col-md-5" *ngIf="control.type == 'checkbox'">
+              <label class="form-check-label ml-4">
+                {{control.label}}
+              </label>
+              <span *ngIf="setRequiredField(control)" class="text-danger">*</span>
+              <ng-container *ngFor="let option of control.options; let i = index">
+                <div class="form-check ml-4 pt-15 mb-15">
+                  <input class="form-check-input" type="checkbox" value="{{option.value}}" (change)="checkBoxOpt($event, control)">
+                  <label class="form-check-label" [for]="control.name">
+                    {{option.label}}
+                  </label>
+                </div>
+              </ng-container>
+              <div 
+              class="text-danger"
+          >{{getValidationErr(control)}}</div>
+            </div>
+          </ng-container>
+          <!-- <div class="save-btn">
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="dynamicForm.invalid">Save</button>
+          </div> -->
+          </form>
+    </div>
+</section>

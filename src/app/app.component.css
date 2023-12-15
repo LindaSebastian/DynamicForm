@@ -1,0 +1,27 @@
+.title {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: 800;
+    justify-content: center;
+    display: flex;
+}
+
+button {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 800;
+    justify-content: center;
+    display: flex;
+    margin: 10px;
+}
+
+
+.employee-form {
+    display: flexbox;
+    border: 1px solid #cec7c7;
+}
+
+.container{
+    width: 100%;
+    padding: 40px;
+}

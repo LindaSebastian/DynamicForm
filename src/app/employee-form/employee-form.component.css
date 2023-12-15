@@ -1,0 +1,48 @@
+.label {
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.sub-form{
+    border: 1px solid #cec7c7;
+    margin: 10px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.ml-4 {
+  margin-left: 3.5rem;
+}
+
+.mt-2 {
+  margin-top: 2.5rem;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.pt-15 {
+  padding-top: 15px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.pt-35 {
+  padding-top: 35px;
+}
+
+.save-btn {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 14px;
+  font-weight: 800;
+  justify-content: right;
+  display: flex;
+  margin: 0 20px 10px 0;
+}
