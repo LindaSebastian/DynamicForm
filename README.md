@@ -1,10 +1,22 @@
+# Run project
+-Install node version 16.20.2 or above
+-install Angular 15
+-Download project
+-run npm install
+-run npm start
+
+
+# Contents
+-Created dynamic form using the reactive Forms
+-Data is added in the service
+
 # DynamicForm
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` or 'npm start'for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
